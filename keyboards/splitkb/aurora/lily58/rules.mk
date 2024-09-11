@@ -14,3 +14,5 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 DEFAULT_FOLDER = splitkb/aurora/lily58/rev1
+OLED_ENABLE=yes
+CONVERT_TO=promicro_rp2040
