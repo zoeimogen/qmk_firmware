@@ -11,25 +11,25 @@ void render_mod_status_gui_alt(uint8_t modifiers);
 void render_mod_status_ctrl_shift(uint8_t modifiers);
 void render_kb_LED_state(void);
 
-bool oled_task_user(void) {
-    if (!is_keyboard_master()) {
-        return true;
-    }
-
-    render_logo();
-    render_space();
-    render_layer_state();
-    render_mod_status_gui_alt(get_mods()|get_oneshot_mods());
-    render_mod_status_ctrl_shift(get_mods()|get_oneshot_mods());
-    render_kb_LED_state();
-
-    char wpm_str[4];
-    oled_write_P(PSTR("WPM "), false);
-    sprintf(wpm_str, "%3d", get_current_wpm());
-    oled_write(wpm_str, false);
-
-    return false;
-}
+//bool oled_task_user(void) {
+//    if (!is_keyboard_master()) {
+//        return true;
+//    }
+//
+//    render_logo();
+//    render_space();
+//    render_layer_state();
+//    render_mod_status_gui_alt(get_mods()|get_oneshot_mods());
+//    render_mod_status_ctrl_shift(get_mods()|get_oneshot_mods());
+//    render_kb_LED_state();
+//
+//    char wpm_str[4];
+//    oled_write_P(PSTR("WPM "), false);
+//    sprintf(wpm_str, "%3d", get_current_wpm());
+//    oled_write(wpm_str, false);
+//
+//    return false;
+//}
 
 void oled_render_boot(bool bootloader) {
     oled_clear();
